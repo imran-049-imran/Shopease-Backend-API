@@ -81,7 +81,7 @@ Security: Spring Security + JWT
 Database: MySQL
 
 Tools: Maven, Postman, Swagger UI, Git
-
+```
 Project Structure (Layered Architecture)
 src/
  └── main/
@@ -96,7 +96,7 @@ src/
       └── resources/
             ├── application.properties
             └── data.sql  (optional)
-
+```
 🔗 API Documentation
 
 Once project runs:
