@@ -1,10 +1,11 @@
-Shopease – Backend API (Spring Boot + MySQL)
+# Shopease – Backend API (Spring Boot + MySQL)
 
 A secure and scalable e-commerce backend built using Spring Boot, JWT Authentication, and MySQL.
 Provides complete APIs for products, categories, cart, orders, payments, and user management.
 
-Key Features
-🔹 Authentication & Authorization
+# Key Features
+
+ Authentication & Authorization
 
 JWT-based secure login & register
 
@@ -12,7 +13,7 @@ BCrypt password hashing
 
 Role-based access: Admin & Customer
 
-🔹 Product Management
+# Product Management
 
 Add, update, delete products (Admin)
 
@@ -20,7 +21,7 @@ Get all products with search, filter, pagination
 
 Category-wise product listing
 
-🔹 Cart Management
+# Cart Management
 
 Add/remove products from cart
 
@@ -30,7 +31,7 @@ Auto-calculated total amount
 
 One-to-One mapping: User ↔ Cart
 
-🔹 Order Management
+ # Order Management
 
 Place orders from cart
 
@@ -41,13 +42,13 @@ Admin can track all orders
 Order lifecycle:
 Pending → Confirmed → Shipped → Delivered
 
-🔹 Payment Simulation
+# Payment Simulation
 
 Fake payment gateway (Success / Failed)
 
 Transaction logs stored in MySQL
 
-🔹 Database & Relations
+ # Database & Relations
 
 ORM: JPA / Hibernate
 
@@ -61,7 +62,7 @@ Order ↔ OrderItems (One-to-Many)
 
 Category ↔ Products (One-to-Many)
 
-🔹 Utility & Best Practices
+# Utility & Best Practices
 
 Global Exception Handling
 
@@ -72,7 +73,7 @@ Controller → Service → Repository → Entity
 
 Swagger API Documentation for all endpoints
 
-Tech Stack
+# Tech Stack
 
 Backend: Spring Boot, Spring Web, Spring Data JPA
 
@@ -96,17 +97,17 @@ src/
       └── resources/
             ├── application.properties
 ```
-🔗 API Documentation
+# API Documentation
 
 Once project runs:
 
 http://localhost:8080/swagger-ui/index.html
 
-🛠 How to Run
-1. Clone Repo
+# How to Run
+# Clone Repo
 git clone https://github.com/yourname/shopease-backend.git
 
-2. Configure MySQL
+# Configure MySQL
 
 Create a database:
 
@@ -115,19 +116,12 @@ CREATE DATABASE shopease_db;
 
 Add credentials in application.properties.
 
-3. Run Application
+# Run Application
 mvn spring-boot:run
 
-📌 Future Enhancements
+# Future Enhancements
 
 Real payment gateway (Razorpay / Stripe)
 
 Wishlists & Reviews
 
-Admin dashboard
-
-Microservices migration
-
-❤️ Contributions
-
-Pull requests are welcome!
