@@ -95,7 +95,6 @@ src/
       │     └── exception
       └── resources/
             ├── application.properties
-            └── data.sql  (optional)
 ```
 🔗 API Documentation
 
