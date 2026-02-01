@@ -1,58 +1,83 @@
-# Shopease – Backend API (Spring Boot + MySQL)
+Shopease – E-Commerce Backend API
 
-A secure and scalable e-commerce backend built using Spring Boot, JWT Authentication, and MySQL.
-Provides complete APIs for products, categories, cart, orders, payments, and user management.
+Spring Boot | JWT | MySQL
 
-# Key Features
+Shopease is a secure, scalable, and production-ready e-commerce backend built using Spring Boot, Spring Security (JWT), and MySQL.
+It provides complete REST APIs for authentication, product management, cart, orders, payments, and user roles, following clean architecture and best practices.
 
- Authentication & Authorization
+🚀 Key Features
+🔐 Authentication & Authorization
 
-JWT-based secure login & register
+JWT-based Login & Registration
 
-BCrypt password hashing
+BCrypt password encryption
 
-Role-based access: Admin & Customer
+Role-based access control:
 
-# Product Management
+ADMIN
 
-Add, update, delete products (Admin)
+CUSTOMER
 
-Get all products with search, filter, pagination
+Secured APIs using Spring Security
+
+📦 Product & Category Management
+
+Add / Update / Delete products (Admin only)
+
+Fetch all products with:
+
+Search
+
+Filter
+
+Pagination
 
 Category-wise product listing
 
-# Cart Management
+Clean separation using DTOs
 
-Add/remove products from cart
+🛒 Cart Management
 
-Update quantity in cart
+Add products to cart
 
-Auto-calculated total amount
+Update product quantity
 
-One-to-One mapping: User ↔ Cart
+Remove items from cart
 
- # Order Management
+Auto-calculated cart total
 
-Place orders from cart
+One-to-One mapping:
+User ↔ Cart
+
+📑 Order Management
+
+Place order directly from cart
 
 View user-specific order history
 
-Admin can track all orders
+Admin can view & manage all orders
 
-Order lifecycle:
-Pending → Confirmed → Shipped → Delivered
+Order lifecycle management:
 
-# Payment Simulation
+PENDING → CONFIRMED → SHIPPED → DELIVERED
 
-Fake payment gateway (Success / Failed)
+💳 Payment Simulation
 
-Transaction logs stored in MySQL
+Fake payment gateway (for learning purpose)
 
- # Database & Relations
+Payment status:
+
+SUCCESS
+
+FAILED
+
+Transaction details stored in MySQL
+
+🗄️ Database Design & Relationships
 
 ORM: JPA / Hibernate
 
-Entity Mappings:
+Entity Relationships:
 
 User ↔ Cart (One-to-One)
 
@@ -62,66 +87,81 @@ Order ↔ OrderItems (One-to-Many)
 
 Category ↔ Products (One-to-Many)
 
-# Utility & Best Practices
+🧩 Best Practices Used
+
+Layered Architecture
+Controller → Service → Repository → Entity
+
+DTO + Hibernate Validation
 
 Global Exception Handling
 
-DTO + Validation (Hibernate Validator)
+Swagger API Documentation
 
-Clean Architecture:
-Controller → Service → Repository → Entity
+Clean & readable code structure
 
-Swagger API Documentation for all endpoints
+🛠️ Tech Stack
+Layer	Technology
+Backend	Spring Boot, Spring Web
+Security	Spring Security, JWT
+ORM	Spring Data JPA, Hibernate
+Database	MySQL
+Tools	Maven, Postman, Swagger UI, Git
 
-# Tech Stack
-
-Backend: Spring Boot, Spring Web, Spring Data JPA
-
-Security: Spring Security + JWT
-
-Database: MySQL
-
-Tools: Maven, Postman, Swagger UI, Git
 ```
-Project Structure (Layered Architecture)
+📁 Project Structure (Layered Architecture
 src/
  └── main/
-      ├── java/com/shopease/backend/
-      │     ├── controller
-      │     ├── service
-      │     ├── repository
-      │     ├── entity
-      │     ├── dto
-      │     ├── config
-      │     └── exception
-      └── resources/
-            ├── application.properties
-```
-# API Documentation
+     ├── java/com/shopease/backend/
+     │   ├── controller
+     │   ├── service
+     │   ├── repository
+     │   ├── entity
+     │   ├── dto
+     │   ├── config
+     │   └── exception
+     └── resources/
+         ├── application.properties
 
-Once project runs:
+```
+
+📘 API Documentation (Swagger)
+
+Once the application is running, open:
 
 http://localhost:8080/swagger-ui/index.html
 
-# How to Run
-# Clone Repo
+
+You can test all secured & public APIs directly from Swagger.
+
+⚙️ How to Run the Project
+1️⃣ Clone the Repository
 git clone https://github.com/yourname/shopease-backend.git
 
-# Configure MySQL
+2️⃣ Configure MySQL
 
-Create a database:
+Create database:
 
 CREATE DATABASE shopease_db;
 
 
-Add credentials in application.properties.
+Update credentials in application.properties:
 
-# Run Application
+spring.datasource.url=jdbc:mysql://localhost:3306/shopease_db
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+
+3️⃣ Run the Application
 mvn spring-boot:run
 
-# Future Enhancements
+🌱 Future Enhancements
 
-Real payment gateway (Razorpay / Stripe)
+Real payment gateway integration (Razorpay / Stripe)
 
-Wishlists & Reviews
+Product reviews & ratings
 
+Wishlist feature
+
+Order cancellation & refund flow
+
+Admin dashboard APIs
