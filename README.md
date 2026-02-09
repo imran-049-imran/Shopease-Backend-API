@@ -5,7 +5,8 @@ Spring Boot | JWT | MySQL
 Shopease is a secure, scalable, and production-ready e-commerce backend built using Spring Boot, Spring Security (JWT), and MySQL.
 It provides complete REST APIs for authentication, product management, cart, orders, payments, and user roles, following clean architecture and best practices.
 
-🚀 Key Features
+# Key Features
+
 🔐 Authentication & Authorization
 
 JWT-based Login & Registration
@@ -36,7 +37,7 @@ Category-wise product listing
 
 Clean separation using DTOs
 
-🛒 Cart Management
+# Cart Management
 
 Add products to cart
 
@@ -49,7 +50,7 @@ Auto-calculated cart total
 One-to-One mapping:
 User ↔ Cart
 
-📑 Order Management
+# Order Management
 
 Place order directly from cart
 
@@ -61,7 +62,7 @@ Order lifecycle management:
 
 PENDING → CONFIRMED → SHIPPED → DELIVERED
 
-💳 Payment Simulation
+# Payment Simulation
 
 Fake payment gateway (for learning purpose)
 
@@ -71,9 +72,9 @@ SUCCESS
 
 FAILED
 
-Transaction details stored in MySQL
+# Transaction details stored in MySQL
 
-🗄️ Database Design & Relationships
+# Database Design & Relationships
 
 ORM: JPA / Hibernate
 
@@ -87,7 +88,7 @@ Order ↔ OrderItems (One-to-Many)
 
 Category ↔ Products (One-to-Many)
 
-🧩 Best Practices Used
+# Best Practices Used
 
 Layered Architecture
 Controller → Service → Repository → Entity
@@ -125,7 +126,7 @@ src/
 
 ```
 
-📘 API Documentation (Swagger)
+# API Documentation (Swagger)
 
 Once the application is running, open:
 
