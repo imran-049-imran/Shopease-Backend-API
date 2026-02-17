@@ -155,7 +155,7 @@ spring.datasource.password=yourpassword
 3️⃣ Run the Application
 mvn spring-boot:run
 
-🌱 Future Enhancements
+# Future Enhancements
 
 Real payment gateway integration (Razorpay / Stripe)
 
