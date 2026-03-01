@@ -1,4 +1,4 @@
-Shopease – E-Commerce Backend API
+# Shopease – E-Commerce Backend API
 
 Spring Boot | JWT | MySQL
 
